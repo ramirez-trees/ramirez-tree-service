@@ -25,10 +25,10 @@ export default function RootLayout({
       <html lang="en">
         <body className={`font-sans ${inter.variable}`}>
           <div className="flex h-full">
-            <div className="w-1/5">
+            <div className="">
               <Navbar />
             </div>
-            <div className="w-4/5">{children}</div>
+            <div className="">{children}</div>
           </div>
         </body>
       </html>
