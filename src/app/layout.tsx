@@ -25,7 +25,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={`font-sans ${inter.variable}`}>
           <div className="flex h-full">
-            <div className="">
+            <div className="z-50">
               <Navbar />
             </div>
             <div className="">{children}</div>

@@ -17,9 +17,8 @@ export default function NavBar() {
       <Button onClick={toggleMenu} className="absolute top-0 block md:hidden">
         <ChevronRight />
       </Button>
-      {/* {isMenuOpen ? "Close Menu" : "Open Menu"} */}
       <ul
-        className={`flex flex-col gap-5 md:flex-col md:items-center ${isMenuOpen ? "block" : "hidden md:block"}`}
+        className={`flex flex-col md:flex-col md:items-center ${isMenuOpen ? "block" : "hidden md:block"}`}
       >
         <li>Home</li>
         <li>About us</li>
