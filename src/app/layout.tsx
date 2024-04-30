@@ -24,11 +24,11 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`font-sans ${inter.variable}`}>
-          <div className="grid grid-cols-5 grid-rows-5 gap-4">
-            <div className="row-span-5">
+          <div className="flex h-full">
+            <div className="w-1/5">
               <Navbar />
             </div>
-            <div className="col-span-4 row-span-5">{children}</div>
+            <div className="w-4/5">{children}</div>
           </div>
         </body>
       </html>
