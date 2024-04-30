@@ -24,7 +24,9 @@ export default function NavBar() {
         <li>
           <Link href="/">Home</Link>
         </li>
-        <li className="whitespace-nowrap">About us</li>
+        <li className="whitespace-nowrap">
+          <Link href="/services">Services</Link>
+        </li>
         <li>
           <Link href="/projects">Projects</Link>
         </li>

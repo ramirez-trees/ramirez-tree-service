@@ -9,6 +9,16 @@ export default function HomePage() {
       >
         <h1 className="text-3xl text-white">Ramirez Tree Service</h1>
       </div>
+      <div className="mx-10 mt-10 flex flex-col items-center justify-center">
+        <p className="text-3xl">About us</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare
+          arcu dui vivamus arcu felis bibendum ut. Placerat orci nulla
+          pellentesque dignissim enim sit. Elementum sagittis vitae et leo duis.
+          Accumsan tortor posuere ac ut consequat semper viverra nam.
+        </p>
+      </div>
     </main>
   );
 }
