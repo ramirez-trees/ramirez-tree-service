@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,12 +19,18 @@ export default function NavBar() {
         <ChevronRight />
       </Button>
       <ul
-        className={`flex flex-col md:flex-col md:items-center ${isMenuOpen ? "block" : "hidden md:block"}`}
+        className={`flex flex-col gap-5 md:flex-col ${isMenuOpen ? "block" : "hidden md:block"}`}
       >
-        <li>Home</li>
-        <li>About us</li>
-        <li>Projects</li>
-        <li>Contact us</li>
+        <li>
+          <Link href="/">Home</Link>
+        </li>
+        <li className="whitespace-nowrap">About us</li>
+        <li>
+          <Link href="/projects">Projects</Link>
+        </li>
+        <li className="whitespace-nowrap">
+          <Link href="/contact_us">Contact us</Link>
+        </li>
       </ul>
     </nav>
   );
