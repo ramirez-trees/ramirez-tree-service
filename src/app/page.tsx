@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HomePage() {
   return (
     <main className="mx-auto my-auto">
@@ -9,7 +11,13 @@ export default function HomePage() {
       >
         <h1 className="text-3xl text-white">Ramirez Tree Service</h1>
       </div>
-      <div className="mx-10 mt-10 flex flex-col items-center justify-center">
+      <div className="mx-10 mt-10 flex flex-col items-center justify-center gap-10">
+        <Image
+          src="https://i.imgur.com/3q73nnP.jpeg"
+          width={600}
+          height={300}
+          alt="picture of crew"
+        />
         <p className="text-3xl">About us</p>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

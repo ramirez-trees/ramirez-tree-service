@@ -1,3 +1,7 @@
 export default function Services() {
-  return <h1>services page</h1>;
+  return (
+    <div className="mx-auto">
+      <h1 className="">Services</h1>
+    </div>
+  );
 }
