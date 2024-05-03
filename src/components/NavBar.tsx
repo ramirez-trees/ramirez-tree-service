@@ -19,7 +19,7 @@ export default function NavBar() {
         <ChevronRight />
       </Button>
       <ul
-        className={`flex flex-col gap-5 md:flex-col ${isMenuOpen ? "block" : "hidden md:block"}`}
+        className={`flex flex-col md:flex-col ${isMenuOpen ? "block" : "hidden md:block"} gap-5`}
       >
         <li>
           <Link href="/">Home</Link>
