@@ -14,9 +14,10 @@ export default function HomePage() {
       <div className="mx-10 mt-10 flex flex-col items-center justify-center gap-10">
         <Image
           src="https://i.imgur.com/3q73nnP.jpeg"
+          alt="picture of crew"
           width={600}
           height={300}
-          alt="picture of crew"
+          className="rounded-2xl"
         />
         <p className="text-3xl">About us</p>
         <p>
