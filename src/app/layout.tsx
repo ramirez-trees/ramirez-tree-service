@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "~/components/NavBar";
+import Banner from "~/components/Banner";
 
 import { Inter } from "next/font/google";
 
@@ -28,7 +29,10 @@ export default function RootLayout({
             <div className="z-50">
               <Navbar />
             </div>
-            <div className="">{children}</div>
+            <div className="">
+              <Banner />
+              {children}
+            </div>
           </div>
         </body>
       </html>
