@@ -36,7 +36,7 @@ export default function ContactUsForm() {
         <input
           placeholder="name here"
           name="name"
-          className="rounded border border-gray-300"
+          className="rounded border border-gray-300 px-1"
           onChange={handleChange}
         />
       </div>
@@ -45,7 +45,7 @@ export default function ContactUsForm() {
         <input
           placeholder="123-456-7890"
           name="phoneNumber"
-          className="rounded border border-gray-300"
+          className="rounded border border-gray-300 px-1"
           onChange={handleChange}
         />
       </div>
@@ -54,7 +54,7 @@ export default function ContactUsForm() {
         <input
           placeholder="email@email.com"
           name="email"
-          className="rounded border border-gray-300"
+          className="rounded border border-gray-300 px-1"
           onChange={handleChange}
         />
       </div>
@@ -63,11 +63,13 @@ export default function ContactUsForm() {
         <textarea
           placeholder="Question or Description of work needing to be done."
           name="message"
-          className="rounded border border-gray-300"
+          className="rounded border border-gray-300 px-1"
           onChange={handleChange}
         />
       </div>
-      <Button type="submit">Submit</Button>
+      <Button type="submit" className="rounded border bg-green-800">
+        Submit
+      </Button>
     </form>
   );
 }
