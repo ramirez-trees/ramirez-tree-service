@@ -70,7 +70,7 @@ export default function ContactUsForm() {
           id="message"
           placeholder="Question or Description of work needing to be done."
           name="message"
-          className="rounded border border-gray-300 px-1"
+          className="h-24 rounded border border-gray-300 px-1"
           autoComplete="off"
           onChange={handleChange}
         />
