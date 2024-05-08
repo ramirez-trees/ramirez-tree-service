@@ -1,9 +1,5 @@
 "use client";
-import { FormEvent, useState } from "react";
-import { useForm } from "react-hook-form";
-import { Form, FormControl, FormField, FormItem } from "~/components/ui/form";
-import { Input } from "~/components/ui/input";
-import { Button } from "~/components/ui/button";
+import { useState } from "react";
 
 type contactForm = {
   name: string;
@@ -18,26 +14,40 @@ export default function ContactUsForm() {
     email: "",
     message: "",
   });
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    setUserForm((prev) => ({
+      ...prev,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+    event.preventDefault();
     console.log(userForm);
   };
 
   return (
-    <Form {...userForm}>
-      <form onSubmit={handleSubmit}>
-        <FormField
-          // control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input placeholder="Name" {...field} />
-              </FormControl>
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Submit</Button>
-      </form>
-    </Form>
+    <form className="flex flex-col" onSubmit={handleSubmit}>
+      <label>Name:</label>
+      <input placeholder="name here" name="name" onChange={handleChange} />
+      <label>phone number:</label>
+      <input
+        placeholder="123-456-7890"
+        name="phoneNumber"
+        onChange={handleChange}
+      />
+      <label>Email:</label>
+      <input
+        placeholder="email@email.com"
+        name="email"
+        onChange={handleChange}
+      />
+      <label>Message</label>
+      <textarea
+        placeholder="Question or Description of work needing to be done."
+        name="message"
+        onChange={handleChange}
+      />
+    </form>
   );
 }
