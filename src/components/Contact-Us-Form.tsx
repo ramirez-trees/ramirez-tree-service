@@ -14,7 +14,9 @@ export default function ContactUsForm() {
     email: "",
     message: "",
   });
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ): void => {
     setUserForm((prev) => ({
       ...prev,
       [event.target.name]: event.target.value,
