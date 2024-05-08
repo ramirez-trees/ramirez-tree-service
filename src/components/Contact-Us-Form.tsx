@@ -32,38 +32,46 @@ export default function ContactUsForm() {
   return (
     <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
       <div className="flex flex-col">
-        <label>Name:</label>
+        <label htmlFor="name">Name:</label>
         <input
+          id="name"
           placeholder="name here"
           name="name"
           className="rounded border border-gray-300 px-1"
+          autoComplete="name"
           onChange={handleChange}
         />
       </div>
       <div className="flex flex-col">
-        <label>phone number:</label>
+        <label htmlFor="phoneNumber">Phone Number:</label>
         <input
+          id="phoneNumber"
           placeholder="123-456-7890"
           name="phoneNumber"
           className="rounded border border-gray-300 px-1"
+          autoComplete="tel"
           onChange={handleChange}
         />
       </div>
       <div className="flex flex-col">
-        <label>Email:</label>
+        <label htmlFor="email">Email:</label>
         <input
+          id="email"
           placeholder="email@email.com"
           name="email"
           className="rounded border border-gray-300 px-1"
+          autoComplete="email"
           onChange={handleChange}
         />
       </div>
       <div className="flex flex-col">
-        <label>Message</label>
+        <label htmlFor="message">Message</label>
         <textarea
+          id="message"
           placeholder="Question or Description of work needing to be done."
           name="message"
           className="rounded border border-gray-300 px-1"
+          autoComplete="off"
           onChange={handleChange}
         />
       </div>
