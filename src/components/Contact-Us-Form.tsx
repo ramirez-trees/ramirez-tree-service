@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Button } from "~/components/ui/button";
 
 type contactForm = {
   name: string;
@@ -29,27 +30,44 @@ export default function ContactUsForm() {
   };
 
   return (
-    <form className="flex flex-col" onSubmit={handleSubmit}>
-      <label>Name:</label>
-      <input placeholder="name here" name="name" onChange={handleChange} />
-      <label>phone number:</label>
-      <input
-        placeholder="123-456-7890"
-        name="phoneNumber"
-        onChange={handleChange}
-      />
-      <label>Email:</label>
-      <input
-        placeholder="email@email.com"
-        name="email"
-        onChange={handleChange}
-      />
-      <label>Message</label>
-      <textarea
-        placeholder="Question or Description of work needing to be done."
-        name="message"
-        onChange={handleChange}
-      />
+    <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+      <div className="flex flex-col">
+        <label>Name:</label>
+        <input
+          placeholder="name here"
+          name="name"
+          className="rounded border border-gray-300"
+          onChange={handleChange}
+        />
+      </div>
+      <div className="flex flex-col">
+        <label>phone number:</label>
+        <input
+          placeholder="123-456-7890"
+          name="phoneNumber"
+          className="rounded border border-gray-300"
+          onChange={handleChange}
+        />
+      </div>
+      <div className="flex flex-col">
+        <label>Email:</label>
+        <input
+          placeholder="email@email.com"
+          name="email"
+          className="rounded border border-gray-300"
+          onChange={handleChange}
+        />
+      </div>
+      <div className="flex flex-col">
+        <label>Message</label>
+        <textarea
+          placeholder="Question or Description of work needing to be done."
+          name="message"
+          className="rounded border border-gray-300"
+          onChange={handleChange}
+        />
+      </div>
+      <Button type="submit">Submit</Button>
     </form>
   );
 }
