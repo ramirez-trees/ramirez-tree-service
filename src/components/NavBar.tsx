@@ -12,7 +12,9 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="fixed z-10 flex h-screen flex-col items-center justify-center bg-green-800 p-5 md:relative md:z-0 md:w-auto">
+    <nav
+      className={`z-10 flex h-screen flex-col items-center justify-center bg-green-800 p-5 md:relative md:z-0 md:w-auto ${isMenuOpen ? "fixed" : "relative"}`}
+    >
       <Button onClick={toggleMenu} className="absolute top-0 block md:hidden">
         <ChevronRight />
       </Button>
