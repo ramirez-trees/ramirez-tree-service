@@ -12,12 +12,12 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="relative z-10 flex h-screen w-full flex-col items-center justify-center bg-green-800 p-5 md:w-auto">
+    <nav className="relative z-10 flex h-screen flex-col items-center justify-center bg-green-800 p-5 md:w-auto">
       <Button onClick={toggleMenu} className="absolute top-0 block md:hidden">
         <ChevronRight />
       </Button>
       <ul
-        className={`flex flex-col md:flex-col ${isMenuOpen ? "block" : "hidden md:block"} gap-5`}
+        className={`flex flex-col ${isMenuOpen ? "block" : "hidden md:block"} gap-5`}
       >
         <li onClick={toggleMenu}>
           <Link href="/">Home</Link>
