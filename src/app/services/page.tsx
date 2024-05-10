@@ -8,8 +8,8 @@ export default function Services() {
         <p>blurb about the services that we offer</p>
         <div className="mx-auto flex flex-col">
           <p>List of services</p>
-          <Separator />
-          <ul>
+          <Separator className="my-4" style={{ backgroundColor: "black" }} />
+          <ul className="list-disc">
             <li>Tree Pruing</li>
             <li>Brush Clearing</li>
             <li>Garden Work</li>
