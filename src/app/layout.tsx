@@ -25,10 +25,8 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`font-sans ${inter.variable}`}>
-          <div className="flex h-full w-5">
-            <div>
-              <Navbar />
-            </div>
+          <div className="flex">
+            <Navbar />
             <div>
               <Banner />
               {children}
