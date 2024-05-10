@@ -18,6 +18,7 @@ export default function Services() {
             <li>Tree Removal</li>
             <li>Driveway Grading</li>
             <li>Dump Runs</li>
+            <li>Patio Construction</li>
           </ul>
         </div>
       </div>
