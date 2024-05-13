@@ -19,7 +19,7 @@ export default function NavBar() {
         <ChevronRight />
       </Button>
       <ul
-        className={`flex flex-col ${isMenuOpen ? "block" : "hidden md:block"} gap-5`}
+        className={`flex flex-col ${isMenuOpen ? "block" : "hidden md:block"}`}
       >
         <li onClick={toggleMenu}>
           <Link href="/">Home</Link>
