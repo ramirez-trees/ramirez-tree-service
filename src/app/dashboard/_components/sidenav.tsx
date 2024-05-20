@@ -9,7 +9,6 @@ export default function SideNav() {
         <Link href="/dashboard/create">Add New Projects</Link>
       </li>
       <li>Projects</li>
-      <li>Messages</li>
     </ul>
   );
 }
