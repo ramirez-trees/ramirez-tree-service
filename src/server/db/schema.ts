@@ -16,10 +16,12 @@ import {
  *
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
-export const createTable = pgTableCreator((name) => `ramirez-tree-service_${name}`);
+export const createTable = pgTableCreator(
+  (name) => `ramirez-tree-service_${name}`,
+);
 
-export const posts = createTable(
-  "post",
+export const projects = createTable(
+  "project",
   {
     id: serial("id").primaryKey(),
     name: varchar("name", { length: 256 }),
@@ -30,5 +32,5 @@ export const posts = createTable(
   },
   (example) => ({
     nameIndex: index("name_idx").on(example.name),
-  })
+  }),
 );
