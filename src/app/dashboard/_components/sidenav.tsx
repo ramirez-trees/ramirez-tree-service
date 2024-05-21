@@ -8,7 +8,9 @@ export default function SideNav() {
       <li>
         <Link href="/dashboard/create">Add New Projects</Link>
       </li>
-      <li>Projects</li>
+      <li>
+        <Link href="/dashboard/projects">Projects</Link>
+      </li>
     </ul>
   );
 }
