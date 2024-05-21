@@ -1,5 +1,4 @@
 import {
-  OrganizationSwitcher,
   SignedIn,
   SignedOut,
   SignInButton,
