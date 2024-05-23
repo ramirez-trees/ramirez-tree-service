@@ -1,6 +1,15 @@
 import { getProjects } from "~/server/queries";
 
 export default function Projects() {
+  return (
+    <div>
+      <h1>projects page</h1>
+      <Images />
+    </div>
+  );
+}
+
+async function Images() {
   const projects = await getProjects();
   return (
     <div>
