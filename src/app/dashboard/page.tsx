@@ -5,8 +5,11 @@ import {
   SignOutButton,
 } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
+import { getProjects } from "~/server/queries";
+
 export default function DashBoard() {
   const user = auth();
+  const projects = getProjects();
   return (
     <div>
       <h1>Dashboard</h1>
