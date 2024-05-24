@@ -2,6 +2,7 @@
 import { Protect } from "@clerk/nextjs";
 import { UploadButton } from "~/components/uploadthing";
 import { useRouter } from "next/navigation";
+import "@uploadthing/react/styles.css";
 
 export default function CreateProject() {
   const router = useRouter();
@@ -10,13 +11,15 @@ export default function CreateProject() {
       permission="org:permission:admin"
       fallback={<p>you dont have permission</p>}
     >
-      <p>you do have permission</p>
-      <UploadButton
-        endpoint="imageUploader"
-        onClientUploadComplete={() => {
-          router.push("/dashboard");
-        }}
-      />
+      <div className="flex flex-col">
+        <p>you do have permission</p>
+        <UploadButton
+          endpoint="imageUploader"
+          onClientUploadComplete={() => {
+            router.push("/dashboard");
+          }}
+        />
+      </div>
     </Protect>
   );
 }
