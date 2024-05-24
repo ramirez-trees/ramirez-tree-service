@@ -1,4 +1,5 @@
 import { getProjects } from "~/server/queries";
+import Image from "next/image";
 
 export default function Projects() {
   return (
@@ -13,11 +14,15 @@ async function Images() {
   const projects = await getProjects();
   return (
     <div>
-      <h1>projects page</h1>
       {projects.map((project) => (
         <div key={project.id}>
           <h2>{project.name}</h2>
-          <p>{project.url}</p>
+          <Image
+            src={project.url}
+            alt="project image"
+            width={600}
+            height={400}
+          />
         </div>
       ))}
     </div>

@@ -6,15 +6,20 @@ await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
 const config = {
-    images: {
-        remotePatterns: [
-            {
-                protocol: "https",
-                hostname: 'i.imgur.com',
-                pathname: '**',
-            }
-        ]
-    }
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.imgur.com",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "utfs.io",
+        pathname: "**",
+      },
+    ],
+  },
 };
 
 export default config;
