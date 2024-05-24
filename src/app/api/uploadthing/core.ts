@@ -24,7 +24,7 @@ export const ourFileRouter = {
     .onUploadComplete(async ({ metadata, file }) => {
       // This code RUNS ON YOUR SERVER after upload
       await db.insert(projects).values({
-        name: file.name,
+        name: file.key,
         url: file.url,
       });
 

@@ -1,8 +1,9 @@
-// import "use-server";
+import "server-only";
 import { db } from "./db";
 import { auth } from "@clerk/nextjs/server";
 import { projects } from "./db/schema";
 import { eq } from "drizzle-orm";
+import { utapi } from "~/server/uploadthing";
 
 export async function getProjects() {
   const projects = await db.query.projects.findMany({
@@ -11,7 +12,7 @@ export async function getProjects() {
   return projects;
 }
 
-export async function deleteProject(id: number) {
+export async function deleteProject(id: number, imageKey: string) {
   const user = auth();
 
   if (!user.userId) throw new Error("Unauthorized");
@@ -23,5 +24,6 @@ export async function deleteProject(id: number) {
   if (!image) throw new Error("Not found");
 
   await db.delete(projects).where(eq(projects.id, id));
+  await utapi.deleteFiles(imageKey);
   return image;
 }

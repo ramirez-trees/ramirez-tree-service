@@ -29,7 +29,7 @@ async function ProjectImages() {
           <form
             action={async () => {
               "use server";
-              await deleteProject(project.id);
+              await deleteProject(project.id, project.name);
             }}
           >
             <Button
