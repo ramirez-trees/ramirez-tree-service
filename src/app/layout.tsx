@@ -33,6 +33,7 @@ export default function RootLayout({
               <Banner />
               {children}
               {modal}
+              <div id="modal-root" />
             </div>
           </div>
         </body>
