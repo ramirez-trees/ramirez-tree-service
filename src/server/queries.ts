@@ -12,6 +12,13 @@ export async function getProjects() {
   return projects;
 }
 
+export async function getProject(id: number) {
+  const project = await db.query.projects.findFirst({
+    where: (model, { eq }) => eq(model.id, id),
+  });
+  return project;
+}
+
 export async function deleteProject(id: number, imageKey: string) {
   const user = auth();
 

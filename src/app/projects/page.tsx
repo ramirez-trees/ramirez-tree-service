@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Projects() {
   return (
     <div>
-      <h1>projects page</h1>
+      <h1 className="my-3 text-center text-3xl">Previous Work</h1>
       <Images />
     </div>
   );
@@ -12,11 +12,11 @@ export default function Projects() {
 
 async function Images() {
   const projects = await getProjects();
+
   return (
-    <div>
+    <div className="mx-auto">
       {projects.map((project) => (
         <div key={project.id}>
-          <h2>{project.name}</h2>
           <Image
             src={project.url}
             alt="project image"
