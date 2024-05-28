@@ -16,6 +16,9 @@ export async function getProject(id: number) {
   const project = await db.query.projects.findFirst({
     where: (model, { eq }) => eq(model.id, id),
   });
+
+  if (!project) throw new Error("Not found");
+
   return project;
 }
 

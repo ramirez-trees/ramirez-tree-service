@@ -1,4 +1,4 @@
-"use cleint";
+"use client";
 
 import { type ElementRef, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
