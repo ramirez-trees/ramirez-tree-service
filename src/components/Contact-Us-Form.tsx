@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Button } from "~/components/ui/button";
+import emailjs from "emailjs-com";
 
 type contactForm = {
   name: string;
@@ -15,6 +16,7 @@ export default function ContactUsForm() {
     email: "",
     message: "",
   });
+
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ): void => {
@@ -27,6 +29,15 @@ export default function ContactUsForm() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
     console.log(userForm);
+
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", userForm).then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      (error) => {
+        console.log("FAILED...", error);
+      },
+    );
   };
 
   return (
@@ -35,7 +46,7 @@ export default function ContactUsForm() {
         <label htmlFor="name">Name:</label>
         <input
           id="name"
-          placeholder="name here"
+          placeholder="Name here"
           name="name"
           className="rounded border border-gray-300 px-1"
           autoComplete="name"
