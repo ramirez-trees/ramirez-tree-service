@@ -3,12 +3,15 @@ import { useState } from "react";
 import { Button } from "~/components/ui/button";
 import emailjs from "emailjs-com";
 
+emailjs.init(process.env.NEXT_PUBLIC_USER_ID ?? "default_user_id");
+
 type contactForm = {
   name: string;
   phoneNumber: string;
   email: string;
   message: string;
 };
+
 export default function ContactUsForm() {
   const [userForm, setUserForm] = useState<contactForm>({
     name: "",
@@ -30,7 +33,12 @@ export default function ContactUsForm() {
     event.preventDefault();
     console.log(userForm);
 
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", userForm).then(
+    const templateId: string =
+      process.env.NEXT_PUBLIC_TEMPLATE_ID ?? "default_template_id";
+    const serviceId: string =
+      process.env.NEXT_PUBLIC_SERVICE_ID ?? "default_service_id";
+
+    emailjs.send(serviceId, templateId, userForm).then(
       (response) => {
         console.log("SUCCESS!", response.status, response.text);
       },
