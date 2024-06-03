@@ -33,7 +33,7 @@ export default function NavBar() {
           <PopoverTrigger asChild>
             <Button
               size="icon"
-              className="fixed bottom-4 left-4 rounded-full shadow-lg"
+              className="fixed bottom-4 left-4 rounded-full bg-white shadow-lg"
             >
               <Menu />
             </Button>
