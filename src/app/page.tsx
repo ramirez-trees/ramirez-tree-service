@@ -20,7 +20,6 @@ export default function HomePage() {
           priority={true}
           width={600}
           height={400}
-          style={{ width: "auto", height: "auto", objectFit: "cover" }}
           className="rounded-2xl"
         />
       </div>
