@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function NavBar() {
   return (
     <div className="flex h-screen">
-      <nav className="hidden md:flex">
+      <nav className="hidden items-center justify-center bg-green-600 px-2 md:flex">
         <ul>
           <li>
             <Link href="/">Home</Link>
@@ -28,7 +28,7 @@ export default function NavBar() {
           </li>
         </ul>
       </nav>
-      <div className="md:hidden">
+      <div className="fixed bottom-4 left-4 md:hidden">
         <Popover>
           <PopoverTrigger asChild>
             <Button className="fixed bottom-4 left-4 rounded-full shadow-lg">
