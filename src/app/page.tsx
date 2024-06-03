@@ -3,7 +3,7 @@ import { Separator } from "~/components/ui/separator";
 
 export default function HomePage() {
   return (
-    <main className="mx-auto my-auto">
+    <main>
       <div className="mx-10 mt-10 flex flex-col items-center justify-center gap-10">
         <p className="text-3xl">About Us</p>
         <Separator className="my-4" style={{ backgroundColor: "black" }} />
