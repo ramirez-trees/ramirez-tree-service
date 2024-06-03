@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "./ui/button";
-import { Menu } from "lucide-react";
+import { Menu, Mail, Image, Home, Handshake } from "lucide-react";
 import {
   Popover,
   PopoverTrigger,
@@ -28,19 +28,46 @@ export default function NavBar() {
           </li>
         </ul>
       </nav>
-      <div className="fixed bottom-4 left-4 md:hidden">
+      <div className="flex-1 md:hidden">
         <Popover>
           <PopoverTrigger asChild>
-            <Button className="fixed bottom-4 left-4 rounded-full shadow-lg">
+            <Button
+              size="icon"
+              className="fixed bottom-4 left-4 rounded-full shadow-lg"
+            >
               <Menu />
             </Button>
           </PopoverTrigger>
-          <PopoverContent>
-            <div>
-              <Link href="/">Home</Link>
-              <Link href="/services">Services</Link>
-              <Link href="/projects">Projects</Link>
-              <Link href="/contact_us">Contact us</Link>
+          <PopoverContent className="w-64 p-4">
+            <div className="flex flex-col gap-2 bg-white">
+              <Link
+                href="/"
+                className="flex items-center gap-2 rounded-md px-3 py-2 font-medium"
+              >
+                <Home />
+                Home
+              </Link>
+              <Link
+                href="/services"
+                className="flex items-center gap-2 rounded-md px-3 py-2 font-medium"
+              >
+                <Handshake />
+                Services
+              </Link>
+              <Link
+                href="/projects"
+                className="flex items-center gap-2 rounded-md px-3 py-2 font-medium"
+              >
+                <Image />
+                Projects
+              </Link>
+              <Link
+                href="/contact_us"
+                className="flex items-center gap-2 rounded-md px-3 py-2 font-medium"
+              >
+                <Mail />
+                Contact us
+              </Link>
             </div>
           </PopoverContent>
         </Popover>
