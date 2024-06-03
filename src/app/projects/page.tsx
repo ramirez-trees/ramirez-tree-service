@@ -13,10 +13,9 @@ export default function Projects() {
         height="781"
         src="https://www.youtube.com/embed/YW-PhEHNe0w"
         title="Gravel path plus Patio"
-        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        allowFullScreen
       ></iframe>
       <Images />
     </div>
