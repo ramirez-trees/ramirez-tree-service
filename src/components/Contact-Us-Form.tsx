@@ -64,6 +64,7 @@ export default function ContactUsForm() {
           name="name"
           className="rounded border border-gray-300 px-1"
           autoComplete="name"
+          required
           onChange={handleChange}
         />
       </div>
@@ -75,6 +76,7 @@ export default function ContactUsForm() {
           name="phoneNumber"
           className="rounded border border-gray-300 px-1"
           autoComplete="tel"
+          required
           onChange={handleChange}
         />
       </div>
@@ -86,6 +88,7 @@ export default function ContactUsForm() {
           name="email"
           className="rounded border border-gray-300 px-1"
           autoComplete="email"
+          required
           onChange={handleChange}
         />
       </div>
@@ -97,6 +100,7 @@ export default function ContactUsForm() {
           name="message"
           className="h-24 rounded border border-gray-300 px-1"
           autoComplete="off"
+          required
           onChange={handleChange}
         />
       </div>
