@@ -41,6 +41,12 @@ export default function ContactUsForm() {
     emailjs.send(serviceId, templateId, userForm).then(
       (response) => {
         console.log("SUCCESS!", response.status, response.text);
+        setUserForm({
+          name: "",
+          phoneNumber: "",
+          email: "",
+          message: "",
+        });
       },
       (error) => {
         console.log("FAILED...", error);
