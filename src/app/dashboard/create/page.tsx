@@ -16,7 +16,7 @@ export default function CreateProject() {
         <UploadButton
           endpoint="imageUploader"
           onClientUploadComplete={() => {
-            router.push("/dashboard");
+            router.push("/dashboard/projects");
           }}
         />
       </div>
