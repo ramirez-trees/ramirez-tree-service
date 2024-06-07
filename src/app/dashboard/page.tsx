@@ -17,18 +17,18 @@ export default function DashBoard() {
       <h1>Dashboard</h1>
       <SignedOut>
         <p>Please sign in</p>
-        <Button className="rounded bg-blue-400">
+        <div className="flex justify-center rounded bg-blue-400">
           <SignInButton />
-        </Button>
+        </div>
       </SignedOut>
       <SignedIn>
         <p>you are signed in</p>
         <p>this is your userId: {user.userId}</p>
         <p>this is your org id: {user.orgId}</p>
         <p>this is your user roles: {user.orgRole}</p>
-        <Button className="rounded bg-red-400">
+        <div className="flex justify-center rounded bg-red-400">
           <SignOutButton />
-        </Button>
+        </div>
       </SignedIn>
     </div>
   );
