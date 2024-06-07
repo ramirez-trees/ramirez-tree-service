@@ -7,6 +7,8 @@ import {
 import { auth } from "@clerk/nextjs/server";
 import { Button } from "~/components/ui/button";
 
+export const dynamic = "force-dynamic";
+
 export default function DashBoard() {
   const user = auth();
 

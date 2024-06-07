@@ -9,7 +9,7 @@ export default function Projects() {
     <div className="container">
       <h1 className="my-3 text-center text-3xl">Previous Work</h1>
       <div className="flex flex-col">
-        <iframe
+        {/* <iframe
           width="439"
           height="781"
           src="https://www.youtube.com/embed/YW-PhEHNe0w"
@@ -17,7 +17,7 @@ export default function Projects() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
-        ></iframe>
+        ></iframe> */}
         <Images />
       </div>
     </div>
@@ -28,7 +28,7 @@ async function Images() {
   const projects = await getProjects();
 
   return (
-    <div className="mx-auto">
+    <div className="mx-auto flex flex-col gap-2 md:flex-row">
       {projects.map((project) => (
         <div key={project.id}>
           <Link href={`/img/${project.id}`}>
@@ -37,6 +37,7 @@ async function Images() {
               alt="project image"
               width={600}
               height={400}
+              className="rounded"
             />
           </Link>
         </div>
