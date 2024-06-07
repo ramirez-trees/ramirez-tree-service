@@ -11,8 +11,8 @@ import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <div className="flex h-screen">
-      <nav className="hidden items-center justify-center bg-green-700 px-3 md:flex">
+    <div className="flex">
+      <nav className=" fixed left-0 top-0 hidden h-full w-16 flex-col items-center justify-center bg-green-700 px-3 md:flex md:w-32">
         <ul className="flex flex-col space-y-4">
           <li>
             <Link href="/">Home</Link>

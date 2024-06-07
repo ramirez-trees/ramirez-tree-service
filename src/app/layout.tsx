@@ -27,10 +27,10 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`font-sans ${inter.variable}`}>
-          <div className="flex">
+          <div className="flex flex-col">
             <Navbar />
+            <Banner />
             <div>
-              <Banner />
               {children}
               {modal}
               <div id="modal-root" />
