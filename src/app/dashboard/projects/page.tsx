@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "~/components/ui/button";
 import { deleteProject } from "~/server/queries";
 import { revalidatePath } from "next/cache";
+import { Protect } from "@clerk/nextjs";
 
 export default function Projects() {
   return (
@@ -28,21 +29,26 @@ async function ProjectImages() {
             width={600}
             height={400}
           />
-          <form
-            action={async () => {
-              "use server";
-              await deleteProject(project.id, project.name);
-              revalidatePath("/dashboard/projects");
-            }}
+          <Protect
+            permission="org:permission:admin"
+            fallback={<p>you dont have permission</p>}
           >
-            <Button
-              type="submit"
-              variant="destructive"
-              className="rounded bg-red-400"
+            <form
+              action={async () => {
+                "use server";
+                await deleteProject(project.id, project.name);
+                revalidatePath("/dashboard/projects");
+              }}
             >
-              delete
-            </Button>
-          </form>
+              <Button
+                type="submit"
+                variant="destructive"
+                className="rounded bg-red-400"
+              >
+                delete
+              </Button>
+            </form>
+          </Protect>
         </div>
       ))}
     </div>
