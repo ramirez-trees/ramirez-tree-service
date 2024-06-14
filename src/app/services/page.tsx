@@ -19,6 +19,7 @@ export default function Services() {
             <li>Driveway Grading</li>
             <li>Dump Runs</li>
             <li>Patio Construction</li>
+            <li>and more!</li>
           </ul>
         </div>
       </div>
