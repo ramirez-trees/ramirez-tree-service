@@ -2,11 +2,13 @@ import { getProjects } from "~/server/queries";
 import Image from "next/image";
 import { Button } from "~/components/ui/button";
 import { deleteProject } from "~/server/queries";
+import { revalidatePath } from "next/cache";
 
 export default function Projects() {
   return (
     <div>
-      <h1>test projects page</h1>
+      <h1>Projects</h1>
+      <h2>These are all the pictures you&apos;ve loaded</h2>
       <ProjectImages />
     </div>
   );
@@ -30,6 +32,7 @@ async function ProjectImages() {
             action={async () => {
               "use server";
               await deleteProject(project.id, project.name);
+              revalidatePath("/dashboard/projects");
             }}
           >
             <Button
