@@ -15,10 +15,9 @@ export default function Projects() {
   return (
     <div className="container">
       <h1 className="my-3 text-center text-3xl">Previous Work</h1>
-      <div className="flex w-auto flex-col items-center justify-center gap-2">
+      <div className="flex flex-col items-center justify-center gap-2">
         <Videos />
-        <p>images go here</p>
-        {/* <Images /> */}
+        <Images />
       </div>
     </div>
   );
@@ -28,21 +27,24 @@ async function Images() {
   const projects = await getProjects();
 
   return (
-    <div className="mx-auto flex flex-col gap-2 md:flex-row">
-      {projects.map((project) => (
-        <div key={project.id}>
-          <Link href={`/img/${project.id}`}>
-            <Image
-              src={project.url}
-              alt="project image"
-              width={600}
-              height={400}
-              className="rounded"
-            />
-          </Link>
-        </div>
-      ))}
-    </div>
+    <>
+      <p>photos</p>
+      <div className="mx-auto flex flex-col gap-2 md:flex-row">
+        {projects.map((project) => (
+          <div key={project.id}>
+            <Link href={`/img/${project.id}`}>
+              <Image
+                src={project.url}
+                alt="project image"
+                width={600}
+                height={400}
+                className="rounded"
+              />
+            </Link>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 
@@ -61,11 +63,11 @@ function Videos() {
   ];
 
   return (
-    <Carousel>
-      <CarouselContent>
+    <Carousel opts={{ loop: true }}>
+      <CarouselContent className="-mr-96 md:ml-4">
         {videoSource.map((video) => (
           <CarouselItem key={video.id}>
-            <div>
+            <Link href={video.url}>
               <Image
                 src={video.image}
                 alt="project image"
@@ -73,7 +75,7 @@ function Videos() {
                 height={300}
                 className="rounded"
               />
-            </div>
+            </Link>
           </CarouselItem>
         ))}
       </CarouselContent>
