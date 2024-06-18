@@ -64,7 +64,7 @@ function Videos() {
 
   return (
     <Carousel opts={{ loop: true }}>
-      <CarouselContent className="-mr-96 md:ml-4">
+      <CarouselContent className="md:-mr-96 md:ml-4">
         {videoSource.map((video) => (
           <CarouselItem key={video.id}>
             <Link href={video.url}>
