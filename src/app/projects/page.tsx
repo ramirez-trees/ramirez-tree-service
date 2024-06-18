@@ -15,9 +15,10 @@ export default function Projects() {
   return (
     <div className="container">
       <h1 className="my-3 text-center text-3xl">Previous Work</h1>
-      <div className="flex flex-row gap-2">
-        <Images />
+      <div className="flex w-auto flex-col items-center justify-center gap-2">
         <Videos />
+        <p>images go here</p>
+        {/* <Images /> */}
       </div>
     </div>
   );
@@ -58,12 +59,13 @@ function Videos() {
       image: "https://i.imgur.com/EZnzh3t.jpeg",
     },
   ];
+
   return (
     <Carousel>
       <CarouselContent>
         {videoSource.map((video) => (
           <CarouselItem key={video.id}>
-            <Link href={video.url}>
+            <div>
               <Image
                 src={video.image}
                 alt="project image"
@@ -71,7 +73,7 @@ function Videos() {
                 height={300}
                 className="rounded"
               />
-            </Link>
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
