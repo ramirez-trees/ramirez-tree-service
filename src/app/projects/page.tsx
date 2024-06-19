@@ -29,7 +29,7 @@ async function Images() {
   return (
     <>
       {/* <p className="text-3xl">Photo Examples of our work</p> */}
-      <div className="mx-auto flex flex-col gap-2 md:flex-row">
+      <div className="mx-auto flex flex-col flex-wrap gap-2 md:flex-row">
         {projects.map((project) => (
           <div key={project.id}>
             <Link href={`/img/${project.id}`}>
