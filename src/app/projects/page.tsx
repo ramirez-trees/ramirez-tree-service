@@ -28,7 +28,7 @@ async function Images() {
 
   return (
     <>
-      <p>photos</p>
+      {/* <p className="text-3xl">Photo Examples of our work</p> */}
       <div className="mx-auto flex flex-col gap-2 md:flex-row">
         {projects.map((project) => (
           <div key={project.id}>
@@ -63,24 +63,27 @@ function Videos() {
   ];
 
   return (
-    <Carousel opts={{ loop: true }}>
-      <CarouselContent className="md:-mr-96 md:ml-4">
-        {videoSource.map((video) => (
-          <CarouselItem key={video.id}>
-            <Link href={video.url}>
-              <Image
-                src={video.image}
-                alt="project image"
-                width={400}
-                height={300}
-                className="rounded"
-              />
-            </Link>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+    <>
+      <p className="text-3xl">Video Examples of our work </p>
+      <Carousel opts={{ loop: true }}>
+        <CarouselContent className="md:-mr-96 md:ml-4">
+          {videoSource.map((video) => (
+            <CarouselItem key={video.id}>
+              <Link href={video.url}>
+                <Image
+                  src={video.image}
+                  alt="project image"
+                  width={400}
+                  height={300}
+                  className="rounded"
+                />
+              </Link>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </>
   );
 }
