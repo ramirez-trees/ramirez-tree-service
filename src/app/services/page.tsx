@@ -7,9 +7,9 @@ export default function Services() {
         <h1 className="text-center text-4xl">Services</h1>
         <p>blurb about the services that we offer</p>
         <div className="mx-auto flex flex-col">
-          <p>List of services</p>
+          <p className="text-3xl">List of services</p>
           <Separator className="my-4" style={{ backgroundColor: "black" }} />
-          <ul className="list-disc">
+          <ul className="list-disc text-2xl">
             <li>Tree Pruing</li>
             <li>Brush Clearing</li>
             <li>Garden Work</li>
