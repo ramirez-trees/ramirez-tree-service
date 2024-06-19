@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function SideNav() {
   return (
-    <ul className="mx-2 my-2 flex flex-col justify-center gap-2">
+    <ul className="mx-2 my-2 flex flex-col gap-2">
       <li>
         <Link href="/dashboard">Dashboard</Link>
       </li>

@@ -8,8 +8,9 @@ import { Protect } from "@clerk/nextjs";
 export default function Projects() {
   return (
     <div>
-      <h1>Projects</h1>
+      <h1 className="text-3xl">Projects</h1>
       <h2>These are all the pictures you&apos;ve loaded</h2>
+      <h3>These images aren&apos;t fullsize.</h3>
       <ProjectImages />
     </div>
   );
@@ -26,8 +27,8 @@ async function ProjectImages() {
             src={project.url}
             alt="project image"
             className="rounded"
-            width={600}
-            height={400}
+            width={300}
+            height={200}
           />
           <Protect
             permission="org:permission:admin"
