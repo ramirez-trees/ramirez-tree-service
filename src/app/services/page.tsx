@@ -1,6 +1,7 @@
 import { Separator } from "~/components/ui/separator";
 
 export default function Services() {
+  // might move the services into a variable and map it to make it easier to tailwind one tag
   return (
     <>
       <div className="mt-5 flex flex-col items-center justify-center gap-5">
