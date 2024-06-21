@@ -8,11 +8,8 @@ export default function HomePage() {
         <p className="text-3xl">About Us</p>
         <Separator className="my-4" style={{ backgroundColor: "black" }} />
         <p className="text-xl md:w-1/2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare
-          arcu dui vivamus arcu felis bibendum ut. Placerat orci nulla
-          pellentesque dignissim enim sit. Elementum sagittis vitae et leo duis.
-          Accumsan tortor posuere ac ut consequat semper viverra nam.
+          Ramirez Tree Service has been servicing Marin and Sonoma country for
+          over 30 years.
         </p>
         <Image
           src="https://i.imgur.com/3q73nnP.jpeg"
