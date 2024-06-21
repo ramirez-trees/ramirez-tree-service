@@ -14,7 +14,7 @@ export const dynamic = "force-dynamic";
 export default function Projects() {
   return (
     <div className="container">
-      <h1 className="my-3 text-center text-3xl">Previous Work</h1>
+      <h1 className="my-3 text-center text-3xl">Examples of our work</h1>
       <div className="flex flex-col items-center justify-center gap-2">
         <Videos />
         <Images />
@@ -28,7 +28,7 @@ async function Images() {
 
   return (
     <>
-      {/* <p className="text-3xl">Photo Examples of our work</p> */}
+      <p className="text-3xl">Photo Examples of our work</p>
       <div className="mx-auto flex flex-col flex-wrap gap-2 md:flex-row">
         {projects.map((project) => (
           <div key={project.id}>

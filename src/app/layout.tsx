@@ -30,7 +30,7 @@ export default function RootLayout({
           <div className="flex flex-col">
             <Navbar />
             <Banner />
-            <div>
+            <div className="container">
               {children}
               {modal}
               <div id="modal-root" />
