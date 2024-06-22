@@ -5,7 +5,6 @@ import {
   SignOutButton,
 } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
-import { Button } from "~/components/ui/button";
 
 export const dynamic = "force-dynamic";
 
