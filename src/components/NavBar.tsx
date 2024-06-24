@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, Mail, Image as Picture, Home, Handshake } from "lucide-react";
 import {
@@ -10,6 +10,9 @@ import {
 import Link from "next/link";
 
 export default function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const closePopover = () => setIsOpen(false);
+
   return (
     <div className="flex">
       <nav className=" fixed left-0 top-0 hidden h-full w-16 flex-col items-center justify-center bg-green-700 px-3 md:flex md:w-32">
@@ -29,7 +32,7 @@ export default function NavBar() {
         </ul>
       </nav>
       <div className="flex-1 md:hidden">
-        <Popover>
+        <Popover open={isOpen} onOpenChange={setIsOpen}>
           <PopoverTrigger asChild>
             <Button
               size="icon"
@@ -43,6 +46,7 @@ export default function NavBar() {
               <Link
                 href="/"
                 className="flex items-center gap-2 rounded-md px-3 py-2 font-medium"
+                onClick={closePopover}
               >
                 <Home className="h-5 w-5" />
                 Home
@@ -50,6 +54,7 @@ export default function NavBar() {
               <Link
                 href="/services"
                 className="flex items-center gap-2 rounded-md px-3 py-2 font-medium"
+                onClick={closePopover}
               >
                 <Handshake className="h-5 w-5" />
                 Services
@@ -57,6 +62,7 @@ export default function NavBar() {
               <Link
                 href="/projects"
                 className="flex items-center gap-2 rounded-md px-3 py-2 font-medium"
+                onClick={closePopover}
               >
                 <Picture className="h-5 w-5" />
                 Projects
@@ -64,6 +70,7 @@ export default function NavBar() {
               <Link
                 href="/contact_us"
                 className="flex items-center gap-2 rounded-md px-3 py-2 font-medium"
+                onClick={closePopover}
               >
                 <Mail className="h-5 w-5" />
                 Contact us
