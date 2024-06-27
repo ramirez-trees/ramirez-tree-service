@@ -10,4 +10,4 @@ docker run -d --name my-postgres-container -p 5432:5432 -e POSTGRES_DB=mydatabas
 - Add Postres container username and password to .env file
 - NPM install
 - NPM db:push
-- NPM run Dev
+- NPM run dev
