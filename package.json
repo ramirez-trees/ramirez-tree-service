@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "next build",
+    "postbuild": "next-sitemap",
     "db:push": "drizzle-kit push:pg",
     "db:studio": "drizzle-kit studio",
     "dev": "next dev",
