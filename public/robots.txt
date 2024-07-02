@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /dashboard/
+Disallow: /api/
+
+# Host
+Host: https://ramireztreeserviceandlandscaping.com
+
+# Sitemaps
+Sitemap: https://ramireztreeserviceandlandscaping.com/sitemap.xml
